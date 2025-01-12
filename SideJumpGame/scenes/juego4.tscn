@@ -1,0 +1,241 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://img/floor.png" type="Texture" id=2]
+[ext_resource path="res://scenes/triangle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/flag.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/juego.gd" type="Script" id=5]
+[ext_resource path="res://scenes/token.tscn" type="PackedScene" id=6]
+[ext_resource path="res://img/suelo.png" type="Texture" id=7]
+[ext_resource path="res://img/n4.png" type="Texture" id=8]
+[ext_resource path="res://img/fondo5.png" type="Texture" id=9]
+[ext_resource path="res://song/Nivel_4.wav" type="AudioStream" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 104.959, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2952, 56 )
+
+[node name="juego" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="fondo5" type="Sprite" parent="."]
+position = Vector2( 2960, 136 )
+texture = ExtResource( 9 )
+
+[node name="token" parent="." instance=ExtResource( 6 )]
+position = Vector2( 424, 360 )
+
+[node name="token2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1088, 224 )
+
+[node name="token3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1672, 152 )
+
+[node name="token4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1896, 64 )
+
+[node name="token5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2264, 88 )
+
+[node name="token6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2592, 80 )
+
+[node name="token7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2688, -104 )
+
+[node name="token8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3664, 232 )
+
+[node name="token9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2784, 72 )
+
+[node name="token10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3112, 168 )
+
+[node name="token11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3880, 376 )
+
+[node name="token12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4008, 376 )
+
+[node name="token13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4136, 376 )
+
+[node name="token14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4264, 376 )
+
+[node name="token15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4392, 376 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1344, 32 )
+normal = ExtResource( 8 )
+
+[node name="character" parent="." instance=ExtResource( 1 )]
+position = Vector2( 104, 392 )
+
+[node name="triangle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 880, 416 )
+
+[node name="triangle2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 976, 416 )
+
+[node name="triangle3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2088, 416 )
+
+[node name="triangle5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2176, 416 )
+
+[node name="triangle6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2264, 416 )
+
+[node name="triangle4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1072, 416 )
+
+[node name="triangle7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3552, 416 )
+
+[node name="triangle12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4832, 408 )
+
+[node name="triangle13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4944, 408 )
+
+[node name="triangle14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5056, 408 )
+
+[node name="triangle15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5872, 408 )
+
+[node name="triangle8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2728, 416 )
+
+[node name="triangle9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2816, 416 )
+
+[node name="triangle10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2904, 416 )
+
+[node name="triangle11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2640, 416 )
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6664, 352 )
+
+[node name="suelo" type="StaticBody2D" parent="."]
+position = Vector2( 1096, 520 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo6" type="StaticBody2D" parent="."]
+position = Vector2( 1352, 416 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo6"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo6"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo7" type="StaticBody2D" parent="."]
+position = Vector2( 1608, 304 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo7"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo7"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo8" type="StaticBody2D" parent="."]
+position = Vector2( 1992, 328 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo8"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo8"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo9" type="StaticBody2D" parent="."]
+position = Vector2( 2312, 328 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo9"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo9"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo10" type="StaticBody2D" parent="."]
+position = Vector2( 2632, 328 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo10"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo10"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo11" type="StaticBody2D" parent="."]
+position = Vector2( 3016, 328 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo11"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo11"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo12" type="StaticBody2D" parent="."]
+position = Vector2( 3656, 456 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo12"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo12"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2( 944, 496 )
+scale = Vector2( 4.30645, 1 )
+
+[node name="s_floor" type="Sprite" parent="floor"]
+position = Vector2( 607.88, -42 )
+scale = Vector2( 16.0076, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 606.068, 14 )
+scale = Vector2( 0.278651, 1 )
+shape = SubResource( 2 )
+
+[node name="sonido_n4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

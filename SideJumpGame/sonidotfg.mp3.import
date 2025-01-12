@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sonidotfg.mp3-f1107e8a64b7685f875a9f1ed6331eb9.mp3str"
+
+[deps]
+
+source_file="res://sonidotfg.mp3"
+dest_files=[ "res://.import/sonidotfg.mp3-f1107e8a64b7685f875a9f1ed6331eb9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

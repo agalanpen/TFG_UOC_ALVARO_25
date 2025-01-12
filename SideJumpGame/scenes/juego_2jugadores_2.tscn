@@ -1,0 +1,148 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/character_2jugadores_2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://img/floor.png" type="Texture" id=2]
+[ext_resource path="res://scenes/triangle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/flag.tscn" type="PackedScene" id=4]
+[ext_resource path="res://script/juego_2jugadores_2.gd" type="Script" id=5]
+[ext_resource path="res://img/suelo.png" type="Texture" id=7]
+[ext_resource path="res://img/n4.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 104.959, 16 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2952, 56 )
+
+[node name="juego_2jugadores_2" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="personaje_2jugadores" parent="." instance=ExtResource( 1 )]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 1344, 32 )
+normal = ExtResource( 8 )
+
+[node name="triangle" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1104, 416 )
+
+[node name="triangle2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1576, 416 )
+
+[node name="triangle3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2088, 416 )
+
+[node name="triangle5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2176, 416 )
+
+[node name="triangle6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2264, 416 )
+
+[node name="triangle4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1664, 416 )
+
+[node name="triangle7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3552, 416 )
+
+[node name="triangle12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4832, 408 )
+
+[node name="triangle13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4944, 408 )
+
+[node name="triangle14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5056, 408 )
+
+[node name="triangle15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5872, 408 )
+
+[node name="triangle8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2728, 416 )
+
+[node name="triangle9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2816, 416 )
+
+[node name="triangle10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2904, 416 )
+
+[node name="triangle11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2640, 416 )
+
+[node name="Area2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6664, 352 )
+
+[node name="suelo" type="StaticBody2D" parent="."]
+position = Vector2( 1544, 552 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo2" type="StaticBody2D" parent="."]
+position = Vector2( 1864, 496 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo2"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo2"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo3" type="StaticBody2D" parent="."]
+position = Vector2( 2184, 464 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo3"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo3"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo4" type="StaticBody2D" parent="."]
+position = Vector2( 2504, 440 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo4"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo4"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="suelo5" type="StaticBody2D" parent="."]
+position = Vector2( 2824, 440 )
+scale = Vector2( 0.946447, 1 )
+
+[node name="Sprite" type="Sprite" parent="suelo5"]
+position = Vector2( 299.086, -240 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="suelo5"]
+position = Vector2( 298.157, -160 )
+shape = SubResource( 1 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2( 944, 496 )
+scale = Vector2( 4.30645, 1 )
+
+[node name="s_floor" type="Sprite" parent="floor"]
+position = Vector2( 607.88, -42 )
+scale = Vector2( 16.0076, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 606.068, 14 )
+scale = Vector2( 0.278651, 1 )
+shape = SubResource( 2 )
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
